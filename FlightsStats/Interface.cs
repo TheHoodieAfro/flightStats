@@ -13,6 +13,8 @@ namespace FlightsStats
 {
     public partial class Interface : Form
     {
+        private model model;
+
         public Interface()
         {
             InitializeComponent();

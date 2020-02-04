@@ -7,27 +7,27 @@ namespace Model
    public class Flight
     {
         private String date;
-        private String destination;
         private String origin;
-        private String DepartureDelay;
-        private String ArriveDelay;
-        private String AirlineId;
+        private String destination;
+        private String departureDelay;
+        private String arriveDelay;
+        private String airlineId;
 
-        public Flight(string date, string destination, string origin, string departureDelay, string arriveDelay, string airlineId)
+        public Flight(string date, string origin, string destination, string departureDelay, string arriveDelay, string airlineId)
         {
             this.Date = date;
-            this.destination = destination;
             this.Origin = origin;
-            DepartureDelay1 = departureDelay;
-            ArriveDelay1 = arriveDelay;
-            AirlineId1 = airlineId;
+            this.Destination = destination;
+            this.DepartureDelay = departureDelay;
+            this.ArriveDelay = arriveDelay;
+            this.AirlineId = airlineId;
         }
 
         public string Date { get => date; set => date = value; }
-        public string Destination { get => destination; set => destination = value; }
         public string Origin { get => origin; set => origin = value; }
-        public string DepartureDelay1 { get => DepartureDelay; set => DepartureDelay = value; }
-        public string ArriveDelay1 { get => ArriveDelay; set => ArriveDelay = value; }
-        public string AirlineId1 { get => AirlineId; set => AirlineId = value; }
+        public string Destination { get => destination; set => destination = value; }
+        public string DepartureDelay { get => departureDelay; set => departureDelay = value; }
+        public string ArriveDelay { get => arriveDelay; set => arriveDelay = value; }
+        public string AirlineId { get => airlineId; set => airlineId = value; }
     }
 }

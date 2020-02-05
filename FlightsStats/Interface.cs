@@ -60,7 +60,7 @@ namespace FlightsStats
                     flights = new Flight[lines.Length - 1];
                     for (int i = 1; i < lines.Length; i++)
                     {
-                        String[] data = lines[i].Split(';');
+                        String[] data = lines[i].Split(',');
                         Flight f = new Flight(data[5], data[15], data[25], data[34], data[45],data[9], data[7]);
                         flights[i - 1] = f;
                         int da = cbDate.FindString(data[5]);
@@ -76,7 +76,7 @@ namespace FlightsStats
                         if (a == -1)
                             cbAirlineID.Items.Add(data[7]);
 
-                        Mark();
+                        //Mark();
                     }
 
                     sr.Close();

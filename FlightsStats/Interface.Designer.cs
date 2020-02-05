@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker3 = new System.ComponentModel.BackgroundWorker();
@@ -43,22 +43,22 @@
             this.splitter2 = new System.Windows.Forms.Splitter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panelLateral = new System.Windows.Forms.Panel();
+            this.split3 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.cbAirlineID = new System.Windows.Forms.ComboBox();
+            this.cbDestination = new System.Windows.Forms.ComboBox();
+            this.cbOrigin = new System.Windows.Forms.ComboBox();
+            this.cbDate = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tbFlightID = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.split2 = new System.Windows.Forms.Label();
             this.split1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btPanel = new System.Windows.Forms.Button();
-            this.split2 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.tbFlightID = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.cbDate = new System.Windows.Forms.ComboBox();
-            this.cbOrigin = new System.Windows.Forms.ComboBox();
-            this.cbDestination = new System.Windows.Forms.ComboBox();
-            this.cbAirlineID = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.split3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panelLateral.SuspendLayout();
             this.SuspendLayout();
@@ -155,12 +155,12 @@
             this.dataGridView1.GridColor = System.Drawing.Color.SteelBlue;
             this.dataGridView1.Location = new System.Drawing.Point(769, 263);
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Size = new System.Drawing.Size(675, 328);
             this.dataGridView1.TabIndex = 7;
             // 
@@ -186,6 +186,133 @@
             this.panelLateral.Name = "panelLateral";
             this.panelLateral.Size = new System.Drawing.Size(340, 635);
             this.panelLateral.TabIndex = 8;
+            // 
+            // split3
+            // 
+            this.split3.AutoSize = true;
+            this.split3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.split3.Location = new System.Drawing.Point(-6, 499);
+            this.split3.Name = "split3";
+            this.split3.Size = new System.Drawing.Size(346, 13);
+            this.split3.TabIndex = 16;
+            this.split3.Text = "---------------------------------------------------------------------------------" +
+    "--------------------------------";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label11.Location = new System.Drawing.Point(15, 432);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(87, 23);
+            this.label11.TabIndex = 15;
+            this.label11.Text = "Flight ID:";
+            // 
+            // cbAirlineID
+            // 
+            this.cbAirlineID.FormattingEnabled = true;
+            this.cbAirlineID.Location = new System.Drawing.Point(162, 289);
+            this.cbAirlineID.Name = "cbAirlineID";
+            this.cbAirlineID.Size = new System.Drawing.Size(150, 21);
+            this.cbAirlineID.TabIndex = 14;
+            // 
+            // cbDestination
+            // 
+            this.cbDestination.FormattingEnabled = true;
+            this.cbDestination.Location = new System.Drawing.Point(162, 243);
+            this.cbDestination.Name = "cbDestination";
+            this.cbDestination.Size = new System.Drawing.Size(150, 21);
+            this.cbDestination.TabIndex = 13;
+            // 
+            // cbOrigin
+            // 
+            this.cbOrigin.FormattingEnabled = true;
+            this.cbOrigin.Location = new System.Drawing.Point(162, 195);
+            this.cbOrigin.Name = "cbOrigin";
+            this.cbOrigin.Size = new System.Drawing.Size(150, 21);
+            this.cbOrigin.TabIndex = 12;
+            // 
+            // cbDate
+            // 
+            this.cbDate.FormattingEnabled = true;
+            this.cbDate.Location = new System.Drawing.Point(162, 148);
+            this.cbDate.Name = "cbDate";
+            this.cbDate.Size = new System.Drawing.Size(150, 21);
+            this.cbDate.TabIndex = 11;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label10.Location = new System.Drawing.Point(15, 289);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(96, 23);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "Airline ID:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label9.Location = new System.Drawing.Point(13, 241);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(117, 23);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "Destination:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label8.Location = new System.Drawing.Point(13, 195);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(71, 23);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "Origin:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label7.Location = new System.Drawing.Point(13, 146);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(59, 23);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Date:";
+            // 
+            // tbFlightID
+            // 
+            this.tbFlightID.Location = new System.Drawing.Point(128, 435);
+            this.tbFlightID.Name = "tbFlightID";
+            this.tbFlightID.Size = new System.Drawing.Size(184, 20);
+            this.tbFlightID.TabIndex = 6;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label6.Location = new System.Drawing.Point(13, 381);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(114, 33);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Search:";
+            // 
+            // split2
+            // 
+            this.split2.AutoSize = true;
+            this.split2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.split2.Location = new System.Drawing.Point(-6, 355);
+            this.split2.Name = "split2";
+            this.split2.Size = new System.Drawing.Size(346, 13);
+            this.split2.TabIndex = 4;
+            this.split2.Text = "---------------------------------------------------------------------------------" +
+    "--------------------------------";
             // 
             // split1
             // 
@@ -217,133 +344,6 @@
             this.btPanel.TabIndex = 0;
             this.btPanel.UseVisualStyleBackColor = true;
             this.btPanel.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // split2
-            // 
-            this.split2.AutoSize = true;
-            this.split2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.split2.Location = new System.Drawing.Point(-6, 355);
-            this.split2.Name = "split2";
-            this.split2.Size = new System.Drawing.Size(346, 13);
-            this.split2.TabIndex = 4;
-            this.split2.Text = "---------------------------------------------------------------------------------" +
-    "--------------------------------";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label6.Location = new System.Drawing.Point(13, 381);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(114, 33);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Search:";
-            // 
-            // tbFlightID
-            // 
-            this.tbFlightID.Location = new System.Drawing.Point(128, 435);
-            this.tbFlightID.Name = "tbFlightID";
-            this.tbFlightID.Size = new System.Drawing.Size(184, 20);
-            this.tbFlightID.TabIndex = 6;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label7.Location = new System.Drawing.Point(13, 146);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(59, 23);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Date:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label8.Location = new System.Drawing.Point(13, 195);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(71, 23);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "Origin:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label9.Location = new System.Drawing.Point(13, 241);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(117, 23);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "Destination:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label10.Location = new System.Drawing.Point(15, 289);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(96, 23);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "Airline ID:";
-            // 
-            // cbDate
-            // 
-            this.cbDate.FormattingEnabled = true;
-            this.cbDate.Location = new System.Drawing.Point(162, 148);
-            this.cbDate.Name = "cbDate";
-            this.cbDate.Size = new System.Drawing.Size(150, 21);
-            this.cbDate.TabIndex = 11;
-            // 
-            // cbOrigin
-            // 
-            this.cbOrigin.FormattingEnabled = true;
-            this.cbOrigin.Location = new System.Drawing.Point(162, 195);
-            this.cbOrigin.Name = "cbOrigin";
-            this.cbOrigin.Size = new System.Drawing.Size(150, 21);
-            this.cbOrigin.TabIndex = 12;
-            // 
-            // cbDestination
-            // 
-            this.cbDestination.FormattingEnabled = true;
-            this.cbDestination.Location = new System.Drawing.Point(162, 243);
-            this.cbDestination.Name = "cbDestination";
-            this.cbDestination.Size = new System.Drawing.Size(150, 21);
-            this.cbDestination.TabIndex = 13;
-            // 
-            // cbAirlineID
-            // 
-            this.cbAirlineID.FormattingEnabled = true;
-            this.cbAirlineID.Location = new System.Drawing.Point(162, 289);
-            this.cbAirlineID.Name = "cbAirlineID";
-            this.cbAirlineID.Size = new System.Drawing.Size(150, 21);
-            this.cbAirlineID.TabIndex = 14;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label11.Location = new System.Drawing.Point(15, 432);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(87, 23);
-            this.label11.TabIndex = 15;
-            this.label11.Text = "Flight ID:";
-            // 
-            // split3
-            // 
-            this.split3.AutoSize = true;
-            this.split3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.split3.Location = new System.Drawing.Point(-6, 499);
-            this.split3.Name = "split3";
-            this.split3.Size = new System.Drawing.Size(346, 13);
-            this.split3.TabIndex = 16;
-            this.split3.Text = "---------------------------------------------------------------------------------" +
-    "--------------------------------";
             // 
             // Interface
             // 

@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GMap.NET.WindowsForms;
+using GMap.NET.WindowsForms.Markers;
 using Model;
 
 namespace FlightsStats
@@ -33,7 +35,7 @@ namespace FlightsStats
 
         private void gMapControl1_Load(object sender, EventArgs e)
         {
-            gmap.MapProvider = GMap.NET.MapProviders.BingMapProvider.Instance;
+            gmap.MapProvider = GMap.NET.MapProviders.GoogleMapProvider.Instance;
             GMap.NET.GMaps.Instance.Mode = GMap.NET.AccessMode.ServerOnly;
             gmap.Position = new GMap.NET.PointLatLng(39.680269, -97.723161);
             gmap.ShowCenter = false;
@@ -54,9 +56,11 @@ namespace FlightsStats
                     flights = new Flight[lines.Length - 1];
                     for (int i = 1; i < lines.Length; i++)
                     {
-                        String[] data = lines[i].Split(';');
+                        String[] data = lines[i].Split(',');
                         Flight f = new Flight(data[5], data[15], data[25], data[34], data[45],data[7]);
                         flights[i - 1] = f;
+
+                        //Mark();
                     }
 
                     sr.Close();
@@ -68,6 +72,15 @@ namespace FlightsStats
                 }
                 dataGridView1.DataSource = flights;
             }
+        }
+
+        public void Mark()
+        {
+            GMapOverlay markers = new GMapOverlay("markers");
+            GMap.NET.PointLatLng point = new GMap.NET.PointLatLng(39.680269, -97.723161);
+            GMapMarker marker = new GMarkerGoogle(point, GMarkerGoogleType.arrow);
+            markers.Markers.Add(marker);
+            gmap.Overlays.Add(markers);
         }
 
         private void button1_Click_1(object sender, EventArgs e)

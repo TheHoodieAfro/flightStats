@@ -18,6 +18,7 @@ namespace FlightsStats
     {
         private model model;
         private Flight[] flights;
+        private GMapOverlay markers;
 
         public Interface()
         {
@@ -39,13 +40,16 @@ namespace FlightsStats
             GMap.NET.GMaps.Instance.Mode = GMap.NET.AccessMode.ServerOnly;
             gmap.Position = new GMap.NET.PointLatLng(39.680269, -97.723161);
             gmap.ShowCenter = false;
+
+            markers = new GMapOverlay("markers");
+            gmap.Overlays.Add(markers);
         }
 
         OpenFileDialog dialog = new OpenFileDialog();
         Boolean active = false;
         private void button1_Click(object sender, EventArgs e)
         {
-           dialog.Filter = "CSV Files|*.csv|TXT Files|*.txt";
+            dialog.Filter = "CSV Files|*.csv|TXT Files|*.txt";
             if (dialog.ShowDialog() == DialogResult.OK)
             {
                 tbPath.Text = dialog.FileName;
@@ -60,7 +64,7 @@ namespace FlightsStats
                         Flight f = new Flight(data[5], data[15], data[25], data[34], data[45],data[7]);
                         flights[i - 1] = f;
 
-                        //Mark();
+                        Mark();
                     }
 
                     sr.Close();
@@ -76,11 +80,14 @@ namespace FlightsStats
 
         public void Mark()
         {
-            GMapOverlay markers = new GMapOverlay("markers");
+            /*GMapOverlay markers = new GMapOverlay("markers");
             GMap.NET.PointLatLng point = new GMap.NET.PointLatLng(39.680269, -97.723161);
             GMapMarker marker = new GMarkerGoogle(point, GMarkerGoogleType.arrow);
             markers.Markers.Add(marker);
-            gmap.Overlays.Add(markers);
+            gmap.Overlays.Add(markers);*/
+
+            GMarkerGoogle mark = new GMarkerGoogle(new GMap.NET.PointLatLng(39.680269, -97.723161), GMarkerGoogleType.green);
+            markers.Markers.Add(mark);
         }
 
         private void button1_Click_1(object sender, EventArgs e)

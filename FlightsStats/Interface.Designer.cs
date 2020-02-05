@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker3 = new System.ComponentModel.BackgroundWorker();
@@ -59,6 +59,7 @@
             this.split1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btPanel = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panelLateral.SuspendLayout();
             this.SuspendLayout();
@@ -155,17 +156,18 @@
             this.dataGridView1.GridColor = System.Drawing.Color.SteelBlue;
             this.dataGridView1.Location = new System.Drawing.Point(769, 263);
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Size = new System.Drawing.Size(675, 328);
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.Size = new System.Drawing.Size(772, 328);
             this.dataGridView1.TabIndex = 7;
             // 
             // panelLateral
             // 
+            this.panelLateral.Controls.Add(this.button1);
             this.panelLateral.Controls.Add(this.split3);
             this.panelLateral.Controls.Add(this.label11);
             this.panelLateral.Controls.Add(this.cbAirlineID);
@@ -182,7 +184,7 @@
             this.panelLateral.Controls.Add(this.split1);
             this.panelLateral.Controls.Add(this.label3);
             this.panelLateral.Controls.Add(this.btPanel);
-            this.panelLateral.Location = new System.Drawing.Point(-260, 0);
+            this.panelLateral.Location = new System.Drawing.Point(9, 0);
             this.panelLateral.Name = "panelLateral";
             this.panelLateral.Size = new System.Drawing.Size(340, 635);
             this.panelLateral.TabIndex = 8;
@@ -191,7 +193,7 @@
             // 
             this.split3.AutoSize = true;
             this.split3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.split3.Location = new System.Drawing.Point(-6, 499);
+            this.split3.Location = new System.Drawing.Point(-3, 533);
             this.split3.Name = "split3";
             this.split3.Size = new System.Drawing.Size(346, 13);
             this.split3.TabIndex = 16;
@@ -216,6 +218,7 @@
             this.cbAirlineID.Name = "cbAirlineID";
             this.cbAirlineID.Size = new System.Drawing.Size(150, 21);
             this.cbAirlineID.TabIndex = 14;
+            this.cbAirlineID.SelectedIndexChanged += new System.EventHandler(this.cbAirlineID_SelectedIndexChanged);
             // 
             // cbDestination
             // 
@@ -224,6 +227,7 @@
             this.cbDestination.Name = "cbDestination";
             this.cbDestination.Size = new System.Drawing.Size(150, 21);
             this.cbDestination.TabIndex = 13;
+            this.cbDestination.SelectedIndexChanged += new System.EventHandler(this.cbDestination_SelectedIndexChanged);
             // 
             // cbOrigin
             // 
@@ -232,6 +236,7 @@
             this.cbOrigin.Name = "cbOrigin";
             this.cbOrigin.Size = new System.Drawing.Size(150, 21);
             this.cbOrigin.TabIndex = 12;
+            this.cbOrigin.SelectedIndexChanged += new System.EventHandler(this.cbOrigin_SelectedIndexChanged);
             // 
             // cbDate
             // 
@@ -240,6 +245,7 @@
             this.cbDate.Name = "cbDate";
             this.cbDate.Size = new System.Drawing.Size(150, 21);
             this.cbDate.TabIndex = 11;
+            this.cbDate.SelectedIndexChanged += new System.EventHandler(this.cbDate_SelectedIndexChanged);
             // 
             // label10
             // 
@@ -345,12 +351,22 @@
             this.btPanel.UseVisualStyleBackColor = true;
             this.btPanel.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(128, 475);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(184, 33);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Search";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
+            // 
             // Interface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
-            this.ClientSize = new System.Drawing.Size(1465, 635);
+            this.ClientSize = new System.Drawing.Size(1553, 635);
             this.Controls.Add(this.panelLateral);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.splitter2);
@@ -402,6 +418,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label split3;
+        private System.Windows.Forms.Button button1;
     }
 }
 

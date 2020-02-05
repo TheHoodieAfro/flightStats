@@ -56,9 +56,21 @@ namespace FlightsStats
                     flights = new Flight[lines.Length - 1];
                     for (int i = 1; i < lines.Length; i++)
                     {
-                        String[] data = lines[i].Split(',');
-                        Flight f = new Flight(data[5], data[15], data[25], data[34], data[45],data[7]);
+                        String[] data = lines[i].Split(';');
+                        Flight f = new Flight(data[5], data[15], data[25], data[34], data[45],data[9], data[7]);
                         flights[i - 1] = f;
+                        int da = cbDate.FindString(data[5]);
+                        int o = cbOrigin.FindString(data[15]);
+                        int de = cbDestination.FindString(data[25]);
+                        int a = cbAirlineID.FindString(data[7]);
+                        if (da == -1)
+                            cbDate.Items.Add(data[5]);
+                        if (o == -1)
+                            cbOrigin.Items.Add(data[15]);
+                        if (de == -1)
+                            cbDestination.Items.Add(data[25]);
+                        if (a == -1)
+                            cbAirlineID.Items.Add(data[7]);
 
                         //Mark();
                     }
@@ -112,6 +124,77 @@ namespace FlightsStats
                 split3.Visible = false;
             }
                 
+        }
+
+        private void cbDate_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = cbDate.SelectedIndex;
+            Flight[] flightCB = new Flight[flights.Length];
+            for(int i = 0; i < flights.Length; i++)
+            {
+                if (flights[i].Date.Equals(cbDate.Items[index].ToString()))
+                {
+                    flightCB[i] = new Flight(flights[i].Date, flights[i].Origin, flights[i].Destination, flights[i].DepartureDelay, flights[i].ArriveDelay, flights[i].FlightId, flights[i].AirlineId);
+                }
+            }
+            dataGridView1.DataSource = flightCB;
+        }
+
+        private void cbOrigin_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = cbOrigin.SelectedIndex;
+            Flight[] flightCB = new Flight[flights.Length];
+            for (int i = 0; i < flights.Length; i++)
+            {
+                if (flights[i].Origin.Equals(cbOrigin.Items[index].ToString()))
+                {
+                    flightCB[i] = new Flight(flights[i].Date, flights[i].Origin, flights[i].Destination, flights[i].DepartureDelay, flights[i].ArriveDelay, flights[i].FlightId, flights[i].AirlineId);
+                }
+            }
+            dataGridView1.DataSource = flightCB;
+        }
+
+        private void cbDestination_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = cbDestination.SelectedIndex;
+            Flight[] flightCB = new Flight[flights.Length];
+            for (int i = 0; i < flights.Length; i++)
+            {
+                if (flights[i].Date.Equals(cbDestination.Items[index].ToString()))
+                {
+                    flightCB[i] = new Flight(flights[i].Date, flights[i].Origin, flights[i].Destination, flights[i].DepartureDelay, flights[i].ArriveDelay, flights[i].FlightId, flights[i].AirlineId);
+                }
+            }
+            dataGridView1.DataSource = flightCB;
+        }
+
+        private void cbAirlineID_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = cbAirlineID.SelectedIndex;
+            Flight[] flightCB = new Flight[flights.Length];
+            for (int i = 0; i < flights.Length; i++)
+            {
+                if (flights[i].Date.Equals(cbAirlineID.Items[index].ToString()))
+                {
+                    flightCB[i] = new Flight(flights[i].Date, flights[i].Origin, flights[i].Destination, flights[i].DepartureDelay, flights[i].ArriveDelay, flights[i].FlightId, flights[i].AirlineId);
+                }
+            }
+            dataGridView1.DataSource = flightCB;
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            String id = tbFlightID.Text;
+            Flight[] flightCB = new Flight[1];
+            for (int i = 0; i < flights.Length; i++)
+            {
+                if (flights[i].FlightId.Equals(id))
+                {
+                    flightCB[0] = new Flight(flights[i].Date, flights[i].Origin, flights[i].Destination, flights[i].DepartureDelay, flights[i].ArriveDelay, flights[i].FlightId, flights[i].AirlineId); 
+                }
+            }
+            dataGridView1.DataSource = flightCB;
+            tbFlightID.Text = "";
         }
     }
 }
